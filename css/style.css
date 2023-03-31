@@ -23,6 +23,7 @@ fonts
   src: url(../fonts/Metropolis-Black.otf);
   font-weight: 900;
 }
+/* Mixin */
 /*
 ============
 Global Style
@@ -32,6 +33,106 @@ Global Style
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Metropolis";
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: black;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 290px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 624px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1170px;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+/* 
+============
+Common class
+============
+*/
+.common-pera-16 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+  line-height: 18px;
+}
+
+.common-pera-14 {
+  font-size: 13px;
+  color: #999999;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .common-pera-16 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .common-pera-14 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .common-pera-16 {
+    font-size: 16px;
+  }
+}
+.about-company span {
+  color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

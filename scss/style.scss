@@ -1,27 +1,15 @@
-/*
-==========
-fonts
-==========
-*/
-@font-face {
-    font-family: "Metropolis";
-    src: url(../fonts/Metropolis-Regular.otf);
-    font-weight: 400;
-}
-@font-face {
-    font-family: "Metropolis";
-    src: url(../fonts/Metropolis-SemiBold.otf);
-    font-weight: 600;
-}
-@font-face {
-    font-family: "Metropolis";
-    src: url(../fonts/Metropolis-Bold.otf);
-    font-weight: 700;
-}
-@font-face {
-    font-family: "Metropolis";
-    src: url(../fonts/Metropolis-Black.otf);
-    font-weight: 900;
+@import "./fonts";
+
+$black: black;
+$gray: #999999;
+$darkgray: #676767;
+$violet: #ed017f;
+
+/* Mixin */
+@mixin media($screen-size) {
+  @media only screen and (min-width: $screen-size) {
+    @content;
+  }
 }
 
 /*
@@ -29,8 +17,101 @@ fonts
 Global Style
 ============
 */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Metropolis";
 }
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $black;
+  font-weight: 700;
+}
+h1 {
+  font-size: 34px;
+  font-weight: 900;
+}
+h2 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.container {
+  max-width: 290px;
+  margin: auto;
+}
+@include media(768px) {
+  .container {
+    max-width: 624px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+}
+@include media(1440px) {
+  .container {
+    max-width: 1170px;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+/* 
+============
+Common class
+============
+*/
+.common-pera-16 {
+  font-size: 14px;
+  font-weight: 400;
+  color: $gray;
+  line-height: 18px;
+}
+.common-pera-14 {
+  font-size: 13px;
+  color: $gray;
+  font-weight: 400;
+  line-height: 18px;
+}
+@include media(768px) {
+  .common-pera-16 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .common-pera-14 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@include media(1440px) {
+  .common-pera-16 {
+    font-size: 16px;
+  }
+}
+
+.about-company span{
+    color: blue;
+}
+
+@import "./footer";
