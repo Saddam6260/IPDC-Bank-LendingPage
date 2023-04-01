@@ -1,0 +1,117 @@
+header {
+  height: 100vh;
+  .navber {
+    background-color: $mideum-violet;
+    width: 100%;
+    padding: 10px 0px;
+
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 70px;
+      }
+      .toggle-btn {
+        font-size: 16px;
+        transition: all 0.5s ease-in-out;
+        font-weight: 700;
+      }
+      .rotate {
+        transform: rotate(-90deg);
+      }
+    }
+    .links-wrap {
+      display: flex;
+      flex-flow: column;
+      margin-left: 5px;
+      row-gap: 15px;
+      height: 0px;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+
+      ul:nth-child(1) {
+        display: flex;
+        flex-flow: column wrap;
+        row-gap: 5px;
+        margin-top: 10px;
+
+        li a {
+          color: $black;
+          font-weight: 600;
+        }
+      }
+      ul:nth-child(2) {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        .sreach-btn {
+          font-size: 18px;
+          color: $violet;
+        }
+        .iservise{
+            padding: 8px 20px;
+        }
+      }
+    }
+    .show-links {
+      height: 225px;
+    }
+  }
+}
+
+@include media(768px) {
+  header {
+    .navber {
+      padding: 15px 0px;
+
+      .nav-header {
+        img {
+          width: 85px;
+        }
+      }
+    }
+  }
+}
+
+@include media(1440px) {
+  header {
+    .navber {
+      background-color: transparent;
+      padding: 27px 0px;
+
+      .container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .nav-header {
+            img {
+              width: 109px;
+            }
+            .toggle-btn {
+              display: none;
+            }
+          }
+          .links-wrap {
+            flex-flow: row wrap;
+            column-gap: 180px;
+            margin-left: 0px;
+            height: auto;
+            overflow: auto;
+    
+            ul:first-child {
+              margin-top: 0px;
+              flex-flow: row wrap;
+              align-items: center;
+              column-gap: 41px;
+            }
+            ul:last-child {
+                column-gap: 35px;
+            }
+          }
+      }
+    }
+  }
+}

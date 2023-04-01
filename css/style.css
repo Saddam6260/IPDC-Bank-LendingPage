@@ -165,11 +165,106 @@ a {
     font-size: 16px;
   }
 }
-/*
-============
-Our Services
-============
-*/
+header {
+  height: 100vh;
+}
+header .navber {
+  background-color: #fce0ef;
+  width: 100%;
+  padding: 10px 0px;
+}
+header .navber .nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navber .nav-header img {
+  width: 70px;
+}
+header .navber .nav-header .toggle-btn {
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+  font-weight: 700;
+}
+header .navber .nav-header .rotate {
+  transform: rotate(-90deg);
+}
+header .navber .links-wrap {
+  display: flex;
+  flex-flow: column;
+  margin-left: 5px;
+  row-gap: 15px;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+header .navber .links-wrap ul:nth-child(1) {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 5px;
+  margin-top: 10px;
+}
+header .navber .links-wrap ul:nth-child(1) li a {
+  color: #000000;
+  font-weight: 600;
+}
+header .navber .links-wrap ul:nth-child(2) {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+header .navber .links-wrap ul:nth-child(2) .sreach-btn {
+  font-size: 18px;
+  color: #ed017f;
+}
+header .navber .links-wrap ul:nth-child(2) .iservise {
+  padding: 8px 20px;
+}
+header .navber .show-links {
+  height: 225px;
+}
+
+@media only screen and (min-width: 768px) {
+  header .navber {
+    padding: 15px 0px;
+  }
+  header .navber .nav-header img {
+    width: 85px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  header .navber {
+    background-color: transparent;
+    padding: 27px 0px;
+  }
+  header .navber .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  header .navber .container .nav-header img {
+    width: 109px;
+  }
+  header .navber .container .nav-header .toggle-btn {
+    display: none;
+  }
+  header .navber .container .links-wrap {
+    flex-flow: row wrap;
+    column-gap: 180px;
+    margin-left: 0px;
+    height: auto;
+    overflow: auto;
+  }
+  header .navber .container .links-wrap ul:first-child {
+    margin-top: 0px;
+    flex-flow: row wrap;
+    align-items: center;
+    column-gap: 41px;
+  }
+  header .navber .container .links-wrap ul:last-child {
+    column-gap: 35px;
+  }
+}
 #our-services {
   padding: 50px 0px 65px 0px;
   background-color: #fef9fc;
@@ -234,10 +329,22 @@ Our Services
   #our-services .heading-wrap {
     text-align: center;
   }
+  #our-services .card-wrap {
+    flex-flow: row wrap;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: start;
+    row-gap: 40px;
+    margin-top: 40px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   #our-services {
     padding: 108px 0px 130px 0px;
+  }
+  #our-services .card-wrap {
+    column-gap: 50px;
+    margin-top: 64px;
   }
 }
 /*

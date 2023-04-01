@@ -1,0 +1,89 @@
+#our-services {
+  padding: 50px 0px 65px 0px;
+  background-color: $thin-violet;
+
+  .heading-wrap {
+    text-align: center;
+  }
+  .card-wrap {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    row-gap: 30px;
+    .card {
+      width: 254px;
+
+      img {
+        width: 100%;
+      }
+      div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        h3 {
+          font-size: 21px;
+          line-height: 35px;
+          letter-spacing: 1px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        button {
+          width: 30px;
+          height: 30px;
+          background-color: $mideum-violet;
+          border-radius: 50%;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-items: center;
+
+          a {
+            color: $violet;
+            line-height: none;
+          }
+        }
+      }
+    }
+    #see-more {
+      background-color: $mideum-violet;
+      padding: 7px 14px;
+      border-radius: 4px;
+
+      a {
+        line-height: none;
+        color: $violet;
+      }
+    }
+  }
+}
+
+@include media(768px) {
+  #our-services {
+    padding: 70px 0px 90px 0px;
+
+    .heading-wrap {
+      text-align: center;
+    }
+    .card-wrap {
+      flex-flow: row wrap;
+      column-gap: 40px;
+      justify-content: center;
+      align-items: start;
+      row-gap: 40px;
+      margin-top: 40px;
+    }
+  }
+}
+@include media(1440px) {
+  #our-services {
+    padding: 108px 0px 130px 0px;
+
+    .card-wrap {
+        column-gap: 50px;
+        margin-top: 64px;
+      }
+  }
+}

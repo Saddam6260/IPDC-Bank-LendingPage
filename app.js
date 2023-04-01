@@ -1,11 +1,9 @@
-// Show Cards
-const cards = document.querySelector(".card-wrap");
-const saddam = document.getElementById("see-more");
-console.log(cards);
-console.log(saddam);
+const toggleBtn = document.querySelector(".toggle-btn");
+const links = document.querySelector(".links-wrap");
 
-saddam.addEventListener("click", function() {
-    console.log("hellow")
+toggleBtn.addEventListener("click", function() {
+
+    links.classList.toggle("show-links");
+    toggleBtn.classList.toggle("rotate");
 })
-
 
