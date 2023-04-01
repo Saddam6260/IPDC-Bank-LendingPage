@@ -265,6 +265,46 @@ header .navber .show-links {
     column-gap: 35px;
   }
 }
+/*
+===============
+Busness Partner
+===============
+*/
+#busness-partner {
+  padding: 40px 0px;
+  background-color: #fef9fc;
+}
+#busness-partner .container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+#busness-partner .container div:nth-child(1) {
+  width: 193px;
+}
+#busness-partner .container div:nth-child(2) {
+  width: 168px;
+}
+#busness-partner .container div:nth-child(3) {
+  width: 186px;
+}
+#busness-partner .container div:nth-child(4) {
+  width: 189px;
+}
+#busness-partner .container div img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  #busness-partner {
+    padding: 50px 0px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #busness-partner {
+    padding: 70px 0px;
+  }
+}
 #our-services {
   padding: 50px 0px 65px 0px;
   background-color: #fef9fc;

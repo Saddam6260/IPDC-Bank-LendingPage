@@ -51,8 +51,8 @@ header {
           font-size: 18px;
           color: $violet;
         }
-        .iservise{
-            padding: 8px 20px;
+        .iservise {
+          padding: 8px 20px;
         }
       }
     }
@@ -82,35 +82,35 @@ header {
       background-color: transparent;
       padding: 27px 0px;
 
-      .container{
+      .container {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         .nav-header {
-            img {
-              width: 109px;
-            }
-            .toggle-btn {
-              display: none;
-            }
+          img {
+            width: 109px;
           }
-          .links-wrap {
+          .toggle-btn {
+            display: none;
+          }
+        }
+        .links-wrap {
+          flex-flow: row wrap;
+          column-gap: 180px;
+          margin-left: 0px;
+          height: auto;
+          overflow: auto;
+
+          ul:first-child {
+            margin-top: 0px;
             flex-flow: row wrap;
-            column-gap: 180px;
-            margin-left: 0px;
-            height: auto;
-            overflow: auto;
-    
-            ul:first-child {
-              margin-top: 0px;
-              flex-flow: row wrap;
-              align-items: center;
-              column-gap: 41px;
-            }
-            ul:last-child {
-                column-gap: 35px;
-            }
+            align-items: center;
+            column-gap: 41px;
           }
+          ul:last-child {
+            column-gap: 35px;
+          }
+        }
       }
     }
   }

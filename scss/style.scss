@@ -150,6 +150,53 @@ a {
 }
 
 @import "./header.scss";
+
+/*
+===============
+Busness Partner
+===============
+*/
+#busness-partner{
+  padding: 40px 0px;
+  background-color: $thin-violet;
+
+  .container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    div:nth-child(1) {
+      width: 193px;
+    }
+    div:nth-child(2) {
+      width: 168px;
+    }
+    div:nth-child(3) {
+      width: 186px;
+    }
+    div:nth-child(4) {
+      width: 189px;
+    }
+
+    div{
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media(768px) {
+  #busness-partner{
+    padding: 50px 0px;
+  }
+}
+@include media(1440px) {
+  #busness-partner{
+    padding: 70px 0px;
+  }
+}
+
 @import "./our-services";
 /*
 ===========
