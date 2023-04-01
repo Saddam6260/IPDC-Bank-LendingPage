@@ -1,9 +1,14 @@
 @import "./fonts";
 
-$black: black;
+$white: #ffffff;
+$black: #000000;
 $gray: #999999;
 $darkgray: #676767;
+$thin-violet: #fef9fc;
+$mideum-violet: #fce0ef;
 $violet: #ed017f;
+$facebook: #4b7fcd;
+$lind-in: #4a71fb;
 
 /* Mixin */
 @mixin media($screen-size) {
@@ -23,11 +28,15 @@ Global Style
   box-sizing: border-box;
   font-family: "Metropolis";
 }
-li{
-    list-style-type: none;
+button {
+  border: none;
+  background: none;
 }
-a{
-    text-decoration: none;
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
 }
 h1,
 h2,
@@ -43,6 +52,7 @@ h1 {
 }
 h2 {
   font-size: 24px;
+  margin-bottom: 16px;
 }
 h5 {
   font-size: 16px;
@@ -61,6 +71,7 @@ h5 {
   }
   h2 {
     font-size: 28px;
+    margin-bottom: 18px;
   }
   h5 {
     font-size: 18px;
@@ -75,6 +86,7 @@ h5 {
   }
   h2 {
     font-size: 36px;
+    margin-bottom: 22px;
   }
 }
 /* 
@@ -82,36 +94,204 @@ h5 {
 Common class
 ============
 */
+.btn {
+  border: none;
+  background-color: $violet;
+  padding: 8px 16px;
+  border-radius: 4px;
+
+  a {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    color: $white;
+  }
+}
 .common-pera-16 {
   font-size: 14px;
   font-weight: 400;
   color: $gray;
   line-height: 18px;
 }
-.common-pera-14 {
+.common-pera-14,
+a {
   font-size: 13px;
   color: $gray;
   font-weight: 400;
   line-height: 18px;
 }
 @include media(768px) {
+  .btn {
+    border: none;
+    background-color: $violet;
+    padding: 10px 18px;
+
+    a {
+      font-size: 12px;
+    }
+  }
   .common-pera-16 {
     font-size: 15px;
     line-height: 22px;
   }
-  .common-pera-14 {
+  .common-pera-14,
+  a {
     font-size: 14px;
     line-height: 22px;
   }
 }
 @include media(1440px) {
+  .btn {
+    padding: 13px 23px;
+  }
   .common-pera-16 {
     font-size: 16px;
   }
 }
 
-.about-company span{
-    color: blue;
+/*
+============
+Our Services
+============
+*/
+#our-services {
+  padding: 50px 0px 65px 0px;
+  background-color: $thin-violet;
+
+  .heading-wrap {
+    text-align: center;
+  }
+  .card-wrap {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    row-gap: 30px;
+    .card {
+      width: 254px;
+      
+      img {
+        width: 100%;
+      }
+      div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        h3 {
+          font-size: 21px;
+          line-height: 35px;
+          letter-spacing: 1px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        button {
+          width: 30px;
+          height: 30px;
+          background-color: $mideum-violet;
+          border-radius: 50%;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-items: center;
+
+          a {
+            color: $violet;
+            line-height: none;
+          }
+        }
+      }
+    }
+    #see-more{
+      background-color: $mideum-violet;
+      padding: 7px 14px;
+      border-radius: 4px;
+    
+      a{
+        line-height: none;
+        color: $violet;
+      }
+    }
+  }
+}
+
+@include media(768px) {
+  #our-services {
+    padding: 70px 0px 90px 0px;
+
+    .heading-wrap {
+      text-align: center;
+    }
+  }
+}
+@include media(1440px) {
+  #our-services {
+    padding: 108px 0px 130px 0px;
+  }
+}
+
+/*
+===========
+Newsletter
+===========
+*/
+#newsletter {
+  padding: 50px 0px;
+  background-color: $thin-violet;
+  .container {
+    .input-wrap {
+      display: flex;
+      flex-flow: row wrap;
+      column-gap: 5px;
+      margin-top: 20px;
+      input {
+        padding: 10px 12px;
+        border: 1px solid $gray;
+        border-radius: 4px;
+        color: $gray;
+      }
+      input::placeholder {
+        color: $gray;
+      }
+    }
+  }
+}
+@include media(768px) {
+  #newsletter {
+    padding: 70px 0px;
+    .container {
+      text-align: center;
+      p {
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+      }
+      .input-wrap {
+        column-gap: 10px;
+        margin-top: 25px;
+        justify-content: center;
+        input {
+          padding: 12px 15px;
+          width: 290px;
+        }
+      }
+    }
+  }
+}
+@include media(1440px) {
+  #newsletter {
+    padding: 108px 0px;
+    .container {
+      .input-wrap {
+        margin-top: 34px;
+
+        input {
+          width: 343px;
+        }
+      }
+    }
+  }
 }
 
 @import "./footer";
