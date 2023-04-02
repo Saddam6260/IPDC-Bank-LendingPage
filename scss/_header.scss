@@ -6,6 +6,10 @@ Header
 
 header {
   height: 100vh;
+  // background-image: linear-gradient($mideum-violet, $mideum-violet);
+  // background-repeat: no-repeat;
+  // background-position: bottom center;
+  // background-size: 290px 40%;
   .navber {
     background-color: $mideum-violet;
     width: 100%;
@@ -67,7 +71,26 @@ header {
     }
   }
 }
-
+.contact {
+  display: flex;
+  column-gap: 16px;
+  li:nth-child(1) {
+    a {
+      color: $facebook;
+    }
+  }
+  li:nth-child(3) {
+    a {
+      color: $lind-in;
+    }
+  }
+  li:nth-child(2),
+  :nth-child(4) {
+    a {
+      color: $violet;
+    }
+  }
+}
 @include media(768px) {
   header {
     .navber {
@@ -117,6 +140,63 @@ header {
             column-gap: 35px;
           }
         }
+      }
+    }
+  }
+}
+
+main{
+  min-height: 90vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  .main-content{
+    p{
+      margin: 15px 0px 10px 0px;
+    }
+    .btn-wrap{
+      display: flex;
+      column-gap: 15px;
+
+      .loan-calculator{
+        background-color: $white;
+        border: 1px solid $violet;
+
+        a{
+          color: $violet;
+        }
+      }
+    }
+    .contact-wrap{
+      margin-top: 70px;
+      display: flex;
+      column-gap: 20px;
+
+      .phone{
+        span:first-child{
+          color: $violet;
+        }
+      }
+    }
+  }
+}
+
+@include media(768px) {
+  main{
+    max-width: 400px;
+    .main-content{
+      h1{
+        display: flex;
+        flex-flow: column wrap;
+      }
+      p{
+        display: flex;
+        flex-flow: column wrap;
+        margin: 20px 0px 15px 0px;
+      }
+      .contact-wrap{
+        margin-top: 110px;
+        column-gap: 30px;
       }
     }
   }

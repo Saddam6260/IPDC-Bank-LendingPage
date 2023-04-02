@@ -228,6 +228,21 @@ header .navber .show-links {
   height: 225px;
 }
 
+.contact {
+  display: flex;
+  column-gap: 16px;
+}
+.contact li:nth-child(1) a {
+  color: #4b7fcd;
+}
+.contact li:nth-child(3) a {
+  color: #4a71fb;
+}
+.contact li:nth-child(2) a,
+.contact :nth-child(4) a {
+  color: #ed017f;
+}
+
 @media only screen and (min-width: 768px) {
   header .navber {
     padding: 15px 0px;
@@ -267,6 +282,53 @@ header .navber .show-links {
   }
   header .navber .container .links-wrap ul:last-child {
     column-gap: 35px;
+  }
+}
+main {
+  min-height: 90vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+main .main-content p {
+  margin: 15px 0px 10px 0px;
+}
+main .main-content .btn-wrap {
+  display: flex;
+  column-gap: 15px;
+}
+main .main-content .btn-wrap .loan-calculator {
+  background-color: #ffffff;
+  border: 1px solid #ed017f;
+}
+main .main-content .btn-wrap .loan-calculator a {
+  color: #ed017f;
+}
+main .main-content .contact-wrap {
+  margin-top: 70px;
+  display: flex;
+  column-gap: 20px;
+}
+main .main-content .contact-wrap .phone span:first-child {
+  color: #ed017f;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    max-width: 400px;
+  }
+  main .main-content h1 {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  main .main-content p {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px 0px 15px 0px;
+  }
+  main .main-content .contact-wrap {
+    margin-top: 110px;
+    column-gap: 30px;
   }
 }
 /*
@@ -737,20 +799,6 @@ footer .container .about-company p {
 }
 footer .container .about-company p span {
   color: #999999;
-}
-footer .container .about-company ul {
-  display: flex;
-  column-gap: 16px;
-}
-footer .container .about-company ul li:nth-child(1) a {
-  color: #4b7fcd;
-}
-footer .container .about-company ul li:nth-child(3) a {
-  color: #4a71fb;
-}
-footer .container .about-company ul li:nth-child(2) a,
-footer .container .about-company ul :nth-child(4) a {
-  color: #ed017f;
 }
 footer .container .list-wrap {
   display: flex;

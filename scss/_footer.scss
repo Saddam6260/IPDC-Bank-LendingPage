@@ -26,26 +26,6 @@ footer {
           color: $gray;
         }
       }
-      ul {
-        display: flex;
-        column-gap: 16px;
-        li:nth-child(1) {
-          a{
-            color: $facebook;
-          }
-        }
-        li:nth-child(3) {
-          a{
-            color: $lind-in;
-          }
-        }
-        li:nth-child(2),
-        :nth-child(4) {
-          a {
-            color: $violet;
-          }
-        }
-      }
     }
     .list-wrap {
       display: flex;
