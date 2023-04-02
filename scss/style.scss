@@ -10,7 +10,6 @@ $violet: #ed017f;
 $facebook: #4b7fcd;
 $lind-in: #4a71fb;
 
-/* Mixin */
 @mixin media($screen-size) {
   @media only screen and (min-width: $screen-size) {
     @content;
@@ -198,6 +197,7 @@ Busness Partner
 }
 
 @import "./our-services";
+@import "./best-result";
 /*
 ===========
 Newsletter

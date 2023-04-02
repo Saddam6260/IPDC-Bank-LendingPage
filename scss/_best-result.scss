@@ -1,0 +1,99 @@
+/*
+===========
+Best Result
+===========
+*/
+
+#best-result{
+    padding: 50px 0px;
+
+    .heading-wrap{
+        text-align: center;
+    }
+    .card-wrap{
+        margin-top: 40px;
+        min-height: 110px;
+        max-height: 110px;
+        max-width: 280px;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        padding: 0px 10px;
+        overflow-x: auto;
+
+        .card{
+            text-align: start;
+            max-width: 150px;
+            min-width: 150px;
+            h3{
+                margin-bottom: 6px;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            p{
+                text-transform: uppercase;
+            }
+        }
+        .card:first-child{
+            h3{
+                color: $violet;
+            }
+        }
+    }
+}
+
+@include media(768px) {
+    #best-result{
+        padding: 70px 0px;
+
+        .heading-wrap{
+            p{
+                display: flex;
+                flex-flow: column wrap;
+            }
+        }
+        .card-wrap{
+            margin-top: 60px;
+            min-height: initial;
+            max-height: initial;
+            max-width: 100%;
+            flex-flow: row wrap;
+            align-items: start;
+            column-gap: 85px;
+            row-gap: 30px;
+            padding: 0px 0px;
+            overflow-x: initial;
+
+            .card{
+                max-width: 150px;
+                min-width: 150px;
+                h3{
+                    margin-bottom: 10px;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+@include media(1440px) {
+    #best-result{
+        padding: 108px 0px;
+
+        .card-wrap{
+            margin-top: 84px;
+            column-gap: 160px;
+            row-gap: 55px;
+
+            .card{
+                text-align: start;
+                max-width: 172px;
+                min-width: initial;
+                h3{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+
