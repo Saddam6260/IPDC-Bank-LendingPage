@@ -1,0 +1,92 @@
+/*
+===================
+Customer Experience
+===================
+*/
+#customer-experience {
+  padding: 50px 0px 40px 0px;
+
+  .container {
+    .heading-wrap {
+      text-align: center;
+    }
+
+    .cards-wrap {
+      margin-top: 40px;
+      max-width: 290px;
+      display: flex;
+      column-gap: 30px;
+      overflow-x: auto;
+
+      .card {
+        min-width: 160px;
+
+        .card-logo {
+          width: 37px;
+          height: 37px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        h5 {
+          font-size: 16px;
+          font-weight: 700;
+          margin: 17px 0px 10px 0px;
+        }
+      }
+    }
+  }
+}
+
+@include media(768px) {
+  #customer-experience {
+    padding: 70px 0px 50px 0px;
+    .container {
+      .heading-wrap {
+        p{
+            display: flex;
+            flex-flow: column wrap;
+        }
+      }
+
+      .cards-wrap {
+        margin-top: 50px;
+        max-width: 100%;
+        column-gap: 70px;
+        row-gap: 40px;
+        overflow-x: initial;
+        flex-flow: row wrap;
+
+        .card {
+          min-width: 160px;
+          max-width: 160px;
+
+          h5 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media(1440px) {
+  #customer-experience {
+    padding: 100px 0px 76px 0px;
+
+    .container {
+      .cards-wrap {
+        margin-top: 76px;
+        column-gap: 176px;
+
+        .card {
+          h5 {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -270,6 +270,76 @@ header .navber .show-links {
   }
 }
 /*
+===================
+Customer Experience
+===================
+*/
+#customer-experience {
+  padding: 50px 0px 40px 0px;
+}
+#customer-experience .container .heading-wrap {
+  text-align: center;
+}
+#customer-experience .container .cards-wrap {
+  margin-top: 40px;
+  max-width: 290px;
+  display: flex;
+  column-gap: 30px;
+  overflow-x: auto;
+}
+#customer-experience .container .cards-wrap .card {
+  min-width: 160px;
+}
+#customer-experience .container .cards-wrap .card .card-logo {
+  width: 37px;
+  height: 37px;
+}
+#customer-experience .container .cards-wrap .card .card-logo img {
+  width: 100%;
+}
+#customer-experience .container .cards-wrap .card h5 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 17px 0px 10px 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  #customer-experience {
+    padding: 70px 0px 50px 0px;
+  }
+  #customer-experience .container .heading-wrap p {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  #customer-experience .container .cards-wrap {
+    margin-top: 50px;
+    max-width: 100%;
+    column-gap: 70px;
+    row-gap: 40px;
+    overflow-x: initial;
+    flex-flow: row wrap;
+  }
+  #customer-experience .container .cards-wrap .card {
+    min-width: 160px;
+    max-width: 160px;
+  }
+  #customer-experience .container .cards-wrap .card h5 {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #customer-experience {
+    padding: 100px 0px 76px 0px;
+  }
+  #customer-experience .container .cards-wrap {
+    margin-top: 76px;
+    column-gap: 176px;
+  }
+  #customer-experience .container .cards-wrap .card h5 {
+    font-size: 22px;
+  }
+}
+/*
 ===============
 Busness Partner
 ===============
