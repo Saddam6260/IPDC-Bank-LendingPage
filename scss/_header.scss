@@ -5,7 +5,7 @@ Header
 */
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   // background-image: linear-gradient($mideum-violet, $mideum-violet);
   // background-repeat: no-repeat;
   // background-position: bottom center;
@@ -70,6 +70,13 @@ header {
       height: 225px;
     }
   }
+  .fixed-nav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: $mideum-violet;
+  }
 }
 .contact {
   display: flex;
@@ -109,7 +116,7 @@ header {
   header {
     .navber {
       background-color: transparent;
-      padding: 27px 0px;
+      padding: 22px 0px;
 
       .container {
         display: flex;
@@ -142,6 +149,9 @@ header {
         }
       }
     }
+    .fixed-nav{
+      background-color: $mideum-violet;
+    }
   }
 }
 
@@ -152,7 +162,7 @@ main{
   justify-content: center;
   .main-content{
     p{
-      margin: 15px 0px 10px 0px;
+      margin: 15px 0px 20px 0px;
     }
     .btn-wrap{
       display: flex;
@@ -183,7 +193,6 @@ main{
 
 @include media(768px) {
   main{
-    max-width: 400px;
     .main-content{
       h1{
         display: flex;
@@ -192,11 +201,24 @@ main{
       p{
         display: flex;
         flex-flow: column wrap;
-        margin: 20px 0px 15px 0px;
+        margin: 18px 0px 25px 0px;
       }
       .contact-wrap{
         margin-top: 110px;
         column-gap: 30px;
+      }
+    }
+  }
+}
+@include media(768px) {
+  main{
+    .main-content{
+      p{
+        margin: 23px 0px 38px 0px;
+      }
+      .contact-wrap{
+        margin-top: 166px;
+        column-gap: 40px;
       }
     }
   }

@@ -170,7 +170,7 @@ Header
 ==========
 */
 header {
-  height: 100vh;
+  min-height: 100vh;
 }
 header .navber {
   background-color: #fce0ef;
@@ -227,6 +227,13 @@ header .navber .links-wrap ul:nth-child(2) .iservise {
 header .navber .show-links {
   height: 225px;
 }
+header .fixed-nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #fce0ef;
+}
 
 .contact {
   display: flex;
@@ -254,7 +261,7 @@ header .navber .show-links {
 @media only screen and (min-width: 1440px) {
   header .navber {
     background-color: transparent;
-    padding: 27px 0px;
+    padding: 22px 0px;
   }
   header .navber .container {
     display: flex;
@@ -283,6 +290,9 @@ header .navber .show-links {
   header .navber .container .links-wrap ul:last-child {
     column-gap: 35px;
   }
+  header .fixed-nav {
+    background-color: #fce0ef;
+  }
 }
 main {
   min-height: 90vh;
@@ -291,7 +301,7 @@ main {
   justify-content: center;
 }
 main .main-content p {
-  margin: 15px 0px 10px 0px;
+  margin: 15px 0px 20px 0px;
 }
 main .main-content .btn-wrap {
   display: flex;
@@ -314,9 +324,6 @@ main .main-content .contact-wrap .phone span:first-child {
 }
 
 @media only screen and (min-width: 768px) {
-  main {
-    max-width: 400px;
-  }
   main .main-content h1 {
     display: flex;
     flex-flow: column wrap;
@@ -324,11 +331,20 @@ main .main-content .contact-wrap .phone span:first-child {
   main .main-content p {
     display: flex;
     flex-flow: column wrap;
-    margin: 20px 0px 15px 0px;
+    margin: 18px 0px 25px 0px;
   }
   main .main-content .contact-wrap {
     margin-top: 110px;
     column-gap: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .main-content p {
+    margin: 23px 0px 38px 0px;
+  }
+  main .main-content .contact-wrap {
+    margin-top: 166px;
+    column-gap: 40px;
   }
 }
 /*
@@ -853,6 +869,51 @@ footer .container .phone span:nth-child(2) {
   }
   footer .container .list-wrap {
     row-gap: 10px;
+  }
+}
+/* 
+=========== 
+Top Link 
+===========
+*/
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #ed017f;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: #ffffff;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+
+/* Show Link js */
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@media only screen and (min-width: 768px) {
+  .top-link {
+    bottom: 3rem;
+    right: 3rem;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
