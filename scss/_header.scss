@@ -6,10 +6,7 @@ Header
 
 header {
   min-height: 100vh;
-  // background-image: linear-gradient($mideum-violet, $mideum-violet);
-  // background-repeat: no-repeat;
-  // background-position: bottom center;
-  // background-size: 290px 40%;
+
   .navber {
     background-color: $mideum-violet;
     width: 100%;
@@ -155,6 +152,7 @@ header {
   }
 }
 
+/* Main section */
 main{
   min-height: 90vh;
   display: flex;
