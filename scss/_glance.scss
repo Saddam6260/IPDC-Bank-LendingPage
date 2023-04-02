@@ -7,7 +7,7 @@ Glance
     padding: 30px 0px;
     display: flex;
     flex-flow: column wrap;
-    row-gap: 30px;
+    row-gap: 40px;
     align-items: center;
 
     .glance-img-wrap{
@@ -38,7 +38,7 @@ Glance
         flex-flow: row wrap;
         align-items: center;
         justify-content: start;
-        column-gap: 20px;
+        column-gap: 40px;
     
         .glance-img-wrap{
             max-width: 345px;

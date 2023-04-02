@@ -281,21 +281,25 @@ Busness Partner
 #busness-partner .container {
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  align-items: center;
 }
-#busness-partner .container div:nth-child(1) {
-  width: 193px;
+#busness-partner .container .heading {
+  margin-bottom: 40px;
 }
-#busness-partner .container div:nth-child(2) {
-  width: 168px;
+#busness-partner .container .heading p {
+  font-size: 18px;
 }
-#busness-partner .container div:nth-child(3) {
-  width: 186px;
+#busness-partner .container .item-wrap {
+  display: flex;
+  max-width: 290px;
+  overflow-x: auto;
+  column-gap: 40px;
 }
-#busness-partner .container div:nth-child(4) {
-  width: 189px;
+#busness-partner .container .item-wrap .item {
+  min-width: 165px;
+  max-width: 165px;
 }
-#busness-partner .container div img {
+#busness-partner .container .item-wrap .item img {
   width: 100%;
 }
 
@@ -303,10 +307,37 @@ Busness Partner
   #busness-partner {
     padding: 50px 0px;
   }
+  #busness-partner .container .heading {
+    margin-bottom: 60px;
+  }
+  #busness-partner .container .heading p {
+    font-size: 20px;
+  }
+  #busness-partner .container .item-wrap {
+    max-width: 100%;
+    overflow-x: initial;
+    flex-flow: row wrap;
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 90px;
+  }
+  #busness-partner .container .item-wrap .item {
+    min-width: 185px;
+    max-width: 185px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   #busness-partner {
     padding: 70px 0px;
+  }
+  #busness-partner .container .heading {
+    margin-bottom: 88px;
+  }
+  #busness-partner .container .heading p {
+    font-size: 23px;
+  }
+  #busness-partner .container .item-wrap {
+    column-gap: 142px;
   }
 }
 /*
@@ -318,7 +349,7 @@ Glance
   padding: 30px 0px;
   display: flex;
   flex-flow: column wrap;
-  row-gap: 30px;
+  row-gap: 40px;
   align-items: center;
 }
 #glance .glance-img-wrap {
@@ -346,7 +377,7 @@ Glance
     flex-flow: row wrap;
     align-items: center;
     justify-content: start;
-    column-gap: 20px;
+    column-gap: 40px;
   }
   #glance .glance-img-wrap {
     max-width: 345px;

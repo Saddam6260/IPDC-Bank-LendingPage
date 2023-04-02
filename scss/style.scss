@@ -155,44 +155,74 @@ a {
 Busness Partner
 ===============
 */
-#busness-partner{
+#busness-partner {
   padding: 40px 0px;
   background-color: $thin-violet;
-
-  .container{
+  .container {
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
-
-    div:nth-child(1) {
-      width: 193px;
+    align-items: center;
+    .heading {
+      margin-bottom: 40px;
+      p {
+        font-size: 18px;
+      }
     }
-    div:nth-child(2) {
-      width: 168px;
-    }
-    div:nth-child(3) {
-      width: 186px;
-    }
-    div:nth-child(4) {
-      width: 189px;
-    }
-
-    div{
-      img{
-        width: 100%;
+    .item-wrap {
+      display: flex;
+      max-width: 290px;
+      overflow-x: auto;
+      column-gap: 40px;
+      .item {
+        min-width: 165px;
+        max-width: 165px;
+        img {
+          width: 100%;
+        }
       }
     }
   }
 }
 
 @include media(768px) {
-  #busness-partner{
+  #busness-partner {
     padding: 50px 0px;
+    .container {
+      .heading {
+        margin-bottom: 60px;
+        p {
+          font-size: 20px;
+        }
+      }
+      .item-wrap {
+        max-width: 100%;
+        overflow-x: initial;
+        flex-flow: row wrap;
+        justify-content: center;
+        row-gap: 30px;
+        column-gap: 90px;
+        .item {
+          min-width: 185px;
+          max-width: 185px;
+        }
+      }
+    }
   }
 }
 @include media(1440px) {
-  #busness-partner{
+  #busness-partner {
     padding: 70px 0px;
+    .container {
+      .heading {
+        margin-bottom: 88px;
+        p {
+          font-size: 23px;
+        }
+      }
+      .item-wrap {
+        column-gap: 142px;
+      }
+    }
   }
 }
 @import "./glance";
