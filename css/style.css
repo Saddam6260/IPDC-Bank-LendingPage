@@ -169,9 +169,6 @@ a {
 Header
 ==========
 */
-header {
-  min-height: 100vh;
-}
 header .navber {
   background-color: #fce0ef;
   width: 100%;
@@ -252,16 +249,20 @@ header .fixed-nav {
 
 @media only screen and (min-width: 768px) {
   header .navber {
-    padding: 15px 0px;
+    padding: 12px 0px;
   }
   header .navber .nav-header img {
     width: 85px;
   }
 }
 @media only screen and (min-width: 1440px) {
+  header {
+    min-height: 730px;
+    position: relative;
+  }
   header .navber {
     background-color: transparent;
-    padding: 22px 0px;
+    padding: 15px 0px;
   }
   header .navber .container {
     display: flex;
@@ -294,11 +295,9 @@ header .fixed-nav {
     background-color: #fce0ef;
   }
 }
-main {
-  min-height: 90vh;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+/* Main section */
+main .main-content {
+  margin-top: 70px;
 }
 main .main-content p {
   margin: 15px 0px 20px 0px;
@@ -323,7 +322,33 @@ main .main-content .contact-wrap .phone span:first-child {
   color: #ed017f;
 }
 
+.family-loan {
+  position: relative;
+}
+.family-loan .main-img-wrap {
+  position: relative;
+  max-width: 240px;
+  height: 220px;
+  margin: 50px auto 0px auto;
+  background-color: #fce0ef;
+  padding: 30px 0px 0px 0px;
+}
+.family-loan .main-img-wrap .content {
+  position: absolute;
+  bottom: -35px;
+  right: 0px;
+}
+.family-loan .main-img-wrap .content .img-wrap {
+  width: 290px;
+}
+.family-loan .main-img-wrap .content .img-wrap img {
+  width: 100%;
+}
+
 @media only screen and (min-width: 768px) {
+  main .main-content {
+    margin-top: 90px;
+  }
   main .main-content h1 {
     display: flex;
     flex-flow: column wrap;
@@ -337,14 +362,46 @@ main .main-content .contact-wrap .phone span:first-child {
     margin-top: 110px;
     column-gap: 30px;
   }
+  .family-loan .main-img-wrap {
+    max-width: 410px;
+    height: 360px;
+  }
+  .family-loan .main-img-wrap .content {
+    bottom: -50px;
+    right: 0px;
+  }
+  .family-loan .main-img-wrap .content .img-wrap {
+    width: 500px;
+  }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1440px) {
+  main .main-content {
+    margin-top: 142px;
+  }
   main .main-content p {
     margin: 23px 0px 38px 0px;
   }
   main .main-content .contact-wrap {
     margin-top: 166px;
     column-gap: 40px;
+  }
+  .family-loan {
+    position: absolute;
+    width: 710px;
+    top: -50px;
+    right: 0px;
+    z-index: -1;
+  }
+  .family-loan .main-img-wrap {
+    max-width: 710px;
+    height: 682px;
+  }
+  .family-loan .main-img-wrap .content {
+    bottom: -90px;
+    right: 0px;
+  }
+  .family-loan .main-img-wrap .content .img-wrap {
+    width: 870px;
   }
 }
 /*
@@ -362,11 +419,11 @@ Customer Experience
   margin-top: 40px;
   max-width: 290px;
   display: flex;
-  column-gap: 30px;
+  column-gap: 40px;
   overflow-x: auto;
 }
 #customer-experience .container .cards-wrap .card {
-  min-width: 160px;
+  min-width: 300px;
 }
 #customer-experience .container .cards-wrap .card .card-logo {
   width: 37px;

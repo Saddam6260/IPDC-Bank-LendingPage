@@ -5,8 +5,6 @@ Header
 */
 
 header {
-  min-height: 100vh;
-
   .navber {
     background-color: $mideum-violet;
     width: 100%;
@@ -67,7 +65,7 @@ header {
       height: 225px;
     }
   }
-  .fixed-nav{
+  .fixed-nav {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -98,7 +96,7 @@ header {
 @include media(768px) {
   header {
     .navber {
-      padding: 15px 0px;
+      padding: 12px 0px;
 
       .nav-header {
         img {
@@ -111,9 +109,11 @@ header {
 
 @include media(1440px) {
   header {
+    min-height: 730px;
+    position: relative;
     .navber {
       background-color: transparent;
-      padding: 22px 0px;
+      padding: 15px 0px;
 
       .container {
         display: flex;
@@ -146,42 +146,39 @@ header {
         }
       }
     }
-    .fixed-nav{
+    .fixed-nav {
       background-color: $mideum-violet;
     }
   }
 }
 
 /* Main section */
-main{
-  min-height: 90vh;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  .main-content{
-    p{
+main {
+  .main-content {
+    margin-top: 70px;
+    p {
       margin: 15px 0px 20px 0px;
     }
-    .btn-wrap{
+    .btn-wrap {
       display: flex;
       column-gap: 15px;
 
-      .loan-calculator{
+      .loan-calculator {
         background-color: $white;
         border: 1px solid $violet;
 
-        a{
+        a {
           color: $violet;
         }
       }
     }
-    .contact-wrap{
+    .contact-wrap {
       margin-top: 70px;
       display: flex;
       column-gap: 20px;
 
-      .phone{
-        span:first-child{
+      .phone {
+        span:first-child {
           color: $violet;
         }
       }
@@ -189,34 +186,95 @@ main{
   }
 }
 
+.family-loan {
+  position: relative;
+  
+  .main-img-wrap {
+    position: relative;
+    max-width: 240px;
+    height: 220px;
+    margin: 50px auto 0px auto;
+    background-color: $mideum-violet;
+    padding: 30px 0px 0px 0px;
+
+    .content {
+      position: absolute;
+      bottom: -35px;
+      right: 0px;
+      .img-wrap {
+        width: 290px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 @include media(768px) {
-  main{
-    .main-content{
-      h1{
+  main {
+    .main-content {
+      margin-top: 90px;
+      h1 {
         display: flex;
         flex-flow: column wrap;
       }
-      p{
+      p {
         display: flex;
         flex-flow: column wrap;
         margin: 18px 0px 25px 0px;
       }
-      .contact-wrap{
+      .contact-wrap {
         margin-top: 110px;
         column-gap: 30px;
       }
     }
   }
+  .family-loan {
+    .main-img-wrap {
+      max-width: 410px;
+      height: 360px;
+
+      .content {
+        bottom: -50px;
+        right: 0px;
+        .img-wrap {
+          width: 500px;
+        }
+      }
+    }
+  }
 }
-@include media(768px) {
-  main{
-    .main-content{
-      p{
+@include media(1440px) {
+  main {
+    .main-content {
+      margin-top: 142px;
+      p {
         margin: 23px 0px 38px 0px;
       }
-      .contact-wrap{
+      .contact-wrap {
         margin-top: 166px;
         column-gap: 40px;
+      }
+    }
+  }
+  .family-loan {
+    position: absolute;
+    width: 710px;
+    top: -50px;
+    right: 0px;
+    z-index: -1;
+    .main-img-wrap {
+      max-width: 710px;
+      height: 682px;
+
+      .content {
+        bottom: -90px;
+        right: 0px;
+        .img-wrap {
+          width: 870px;
+        }
       }
     }
   }
